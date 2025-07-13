@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Görev Listesi</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Görev Listesi</h1>
+
+      <form id="taskForm">
+        <input type="text" id="title" placeholder="Görev Başlığı" required />
+        <textarea
+          id="description"
+          placeholder="Açıklama (Opsiyonel)"
+        ></textarea>
+
+        <div class="priority-group">
+          <span>Öncelik:</span>
+          <label
+            ><input type="radio" name="priority" value="Düşük" /> Düşük</label
+          >
+          <label
+            ><input type="radio" name="priority" value="Orta" /> Orta</label
+          >
+          <label
+            ><input type="radio" name="priority" value="Yüksek" /> Yüksek</label
+          >
+        </div>
+
+        <button type="submit">Ekle</button>
+        <p class="error" id="errorMessage"></p>
+      </form>
+
+      <div class="buttons">
+        <button id="showCompletedBtn">Sadece tamamlananları göster</button>
+        <button id="sortPriorityBtn">Önceliğe göre sırala</button>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
